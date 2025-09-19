@@ -75,11 +75,15 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;   /* Remove underline */
+      color: inherit;          /* Keep text color */
+      display: block;          /* Make whole card clickable */
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -129,18 +133,20 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects">
-        <div class="card">
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" class="card">
           <h3>📘 Learning HTML & CSS</h3>
           <p>Building the foundation of my web development skills.</p>
-        </div>
-        <div class="card">
+        </a>
+        
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank" class="card">
           <h3>💻 JavaScript Basics</h3>
           <p>Making interactive websites with buttons and functions.</p>
-        </div>
-        <div class="card">
+        </a>
+        
+        <a href="https://vercel.com" target="_blank" class="card">
           <h3>🌐 Hosting Online</h3>
           <p>Using GitHub Pages and Vercel to publish my projects.</p>
-        </div>
+        </a>
       </div>
     </section>
 
