@@ -2,65 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Simple Website</title>
+  <title>My Enhanced Website</title>
   <style>
     /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f8fb;
       color: #333;
       line-height: 1.6;
     }
 
     header {
-      background: #4a90e2;
+      background: linear-gradient(135deg, #4a90e2, #357ab8);
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid white;
+    }
+
     nav {
-      background: #333;
+      background: #222;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
-      display: block;
+      transition: background 0.3s;
     }
 
     nav a:hover {
-      background: #575757;
+      background: #4a90e2;
     }
 
     main {
-      padding: 20px;
-      max-width: 900px;
+      padding: 30px 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     h2 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: #4a90e2;
+      border-bottom: 2px solid #4a90e2;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     footer {
       background: #4a90e2;
       color: white;
       text-align: center;
-      padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 15px;
+      margin-top: 40px;
     }
 
     button {
@@ -70,6 +97,8 @@
       padding: 10px 20px;
       cursor: pointer;
       border-radius: 5px;
+      margin-top: 10px;
+      transition: background 0.3s;
     }
 
     button:hover {
@@ -80,8 +109,9 @@
 <body>
 
   <header>
-    <h1>Welcome to My Simple Website</h1>
-    <p>A beginner-friendly HTML, CSS & JS example</p>
+    <img src="https://via.placeholder.com/120" alt="My Photo">
+    <h1>Hello, I’m Diffa</h1>
+    <p>A beginner web developer learning step by step</p>
   </header>
 
   <nav>
@@ -93,33 +123,41 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I'm learning how to build websites. This is my very first complete website made with HTML, CSS, and JavaScript in a single file.</p>
+      <p>I’m learning web development by creating small projects. This website is part of my journey. I enjoy exploring technology, automation, and building cool stuff on the internet.</p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <p>Here are some things I’m working on:</p>
-      <ul>
-        <li>📘 Learning HTML & CSS</li>
-        <li>💻 Building small JavaScript projects</li>
-        <li>🌐 Publishing sites online</li>
-      </ul>
+      <div class="projects">
+        <div class="card">
+          <h3>📘 Learning HTML & CSS</h3>
+          <p>Building the foundation of my web development skills.</p>
+        </div>
+        <div class="card">
+          <h3>💻 JavaScript Basics</h3>
+          <p>Making interactive websites with buttons and functions.</p>
+        </div>
+        <div class="card">
+          <h3>🌐 Hosting Online</h3>
+          <p>Using GitHub Pages and Vercel to publish my projects.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Click the button below to see a greeting:</p>
+      <p>Want to say hi? Click the button below:</p>
       <button onclick="sayHello()">Say Hello</button>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 My Simple Website</p>
+    <p>© 2025 My Enhanced Website</p>
   </footer>
 
   <script>
     function sayHello() {
-      alert("Hello! Thanks for visiting my website.");
+      alert("Hello! Thanks for checking out my website 🚀");
     }
   </script>
 
